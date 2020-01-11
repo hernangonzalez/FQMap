@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,41 @@
 		5F17E28A23C8FC8600603B5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F17E28923C8FC8600603B5D /* Assets.xcassets */; };
 		5F17E28D23C8FC8600603B5D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F17E28C23C8FC8600603B5D /* Preview Assets.xcassets */; };
 		5F17E29023C8FC8600603B5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F17E28E23C8FC8600603B5D /* LaunchScreen.storyboard */; };
+		5F17E29E23C8FF4800603B5D /* FQKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F17E29D23C8FF4800603B5D /* FQKit.swift */; };
+		5F17E2A623C8FFC600603B5D /* libFQKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F17E29B23C8FF4800603B5D /* libFQKit.a */; };
+		5F17E2A923C9005E00603B5D /* DifferenceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5F17E2A823C9005E00603B5D /* DifferenceKit */; };
+		5F17E2AC23C9009600603B5D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5F17E2AB23C9009600603B5D /* Alamofire */; };
+		5F17E2AF23C901B000603B5D /* XCGLogger in Frameworks */ = {isa = PBXBuildFile; productRef = 5F17E2AE23C901B000603B5D /* XCGLogger */; };
+		5F17E2B323C9058400603B5D /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 5F17E2B223C9058400603B5D /* Swinject */; };
+		5F17E2B523C9065000603B5D /* FoursquareAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F17E2B423C9065000603B5D /* FoursquareAPI.swift */; };
+		5F17E2B823C91CD900603B5D /* ExploreRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F17E2B723C91CD900603B5D /* ExploreRequest.swift */; };
+		5F17E2BA23C9244400603B5D /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F17E2B923C9244400603B5D /* APIRequest.swift */; };
+		5F17E2BC23C9D53200603B5D /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F17E2BB23C9D53200603B5D /* Network.swift */; };
+		5F17E2BF23C9D66100603B5D /* ExploreResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F17E2BE23C9D66100603B5D /* ExploreResponse.swift */; };
+		5F17E2C223C9D87B00603B5D /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F17E2C123C9D87B00603B5D /* Venue.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5F17E2A323C8FFC100603B5D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F17E27823C8FC8400603B5D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F17E29A23C8FF4800603B5D;
+			remoteInfo = FQKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5F17E29923C8FF4800603B5D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5F17E28023C8FC8400603B5D /* FQMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FQMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +58,30 @@
 		5F17E28C23C8FC8600603B5D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5F17E28F23C8FC8600603B5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F17E29123C8FC8600603B5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F17E29B23C8FF4800603B5D /* libFQKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFQKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F17E29D23C8FF4800603B5D /* FQKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FQKit.swift; sourceTree = "<group>"; };
+		5F17E2B423C9065000603B5D /* FoursquareAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareAPI.swift; sourceTree = "<group>"; };
+		5F17E2B723C91CD900603B5D /* ExploreRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreRequest.swift; sourceTree = "<group>"; };
+		5F17E2B923C9244400603B5D /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		5F17E2BB23C9D53200603B5D /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		5F17E2BE23C9D66100603B5D /* ExploreResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreResponse.swift; sourceTree = "<group>"; };
+		5F17E2C123C9D87B00603B5D /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		5F17E27D23C8FC8400603B5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F17E2AC23C9009600603B5D /* Alamofire in Frameworks */,
+				5F17E2B323C9058400603B5D /* Swinject in Frameworks */,
+				5F17E2A923C9005E00603B5D /* DifferenceKit in Frameworks */,
+				5F17E2A623C8FFC600603B5D /* libFQKit.a in Frameworks */,
+				5F17E2AF23C901B000603B5D /* XCGLogger in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F17E29823C8FF4800603B5D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,7 +95,9 @@
 			isa = PBXGroup;
 			children = (
 				5F17E28223C8FC8400603B5D /* FQMap */,
+				5F17E29C23C8FF4800603B5D /* FQKit */,
 				5F17E28123C8FC8400603B5D /* Products */,
+				5F17E2A523C8FFC600603B5D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -49,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				5F17E28023C8FC8400603B5D /* FQMap.app */,
+				5F17E29B23C8FF4800603B5D /* libFQKit.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,9 +113,9 @@
 		5F17E28223C8FC8400603B5D /* FQMap */ = {
 			isa = PBXGroup;
 			children = (
+				5F17E2A223C8FF9800603B5D /* Views */,
 				5F17E28323C8FC8400603B5D /* AppDelegate.swift */,
 				5F17E28523C8FC8400603B5D /* SceneDelegate.swift */,
-				5F17E28723C8FC8400603B5D /* ContentView.swift */,
 				5F17E28923C8FC8600603B5D /* Assets.xcassets */,
 				5F17E28E23C8FC8600603B5D /* LaunchScreen.storyboard */,
 				5F17E29123C8FC8600603B5D /* Info.plist */,
@@ -75,6 +132,59 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		5F17E29C23C8FF4800603B5D /* FQKit */ = {
+			isa = PBXGroup;
+			children = (
+				5F17E2C023C9D87300603B5D /* Models */,
+				5F17E2BD23C9D64100603B5D /* Foursquare */,
+				5F17E2B623C91C7900603B5D /* Network */,
+				5F17E29D23C8FF4800603B5D /* FQKit.swift */,
+			);
+			path = FQKit;
+			sourceTree = "<group>";
+		};
+		5F17E2A223C8FF9800603B5D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5F17E28723C8FC8400603B5D /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5F17E2A523C8FFC600603B5D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5F17E2B623C91C7900603B5D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5F17E2B923C9244400603B5D /* APIRequest.swift */,
+				5F17E2BB23C9D53200603B5D /* Network.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		5F17E2BD23C9D64100603B5D /* Foursquare */ = {
+			isa = PBXGroup;
+			children = (
+				5F17E2B723C91CD900603B5D /* ExploreRequest.swift */,
+				5F17E2BE23C9D66100603B5D /* ExploreResponse.swift */,
+				5F17E2B423C9065000603B5D /* FoursquareAPI.swift */,
+			);
+			path = Foursquare;
+			sourceTree = "<group>";
+		};
+		5F17E2C023C9D87300603B5D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5F17E2C123C9D87B00603B5D /* Venue.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,11 +199,35 @@
 			buildRules = (
 			);
 			dependencies = (
+				5F17E2A423C8FFC100603B5D /* PBXTargetDependency */,
 			);
 			name = FQMap;
+			packageProductDependencies = (
+				5F17E2A823C9005E00603B5D /* DifferenceKit */,
+				5F17E2AB23C9009600603B5D /* Alamofire */,
+				5F17E2AE23C901B000603B5D /* XCGLogger */,
+				5F17E2B223C9058400603B5D /* Swinject */,
+			);
 			productName = FQMap;
 			productReference = 5F17E28023C8FC8400603B5D /* FQMap.app */;
 			productType = "com.apple.product-type.application";
+		};
+		5F17E29A23C8FF4800603B5D /* FQKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F17E29F23C8FF4800603B5D /* Build configuration list for PBXNativeTarget "FQKit" */;
+			buildPhases = (
+				5F17E29723C8FF4800603B5D /* Sources */,
+				5F17E29823C8FF4800603B5D /* Frameworks */,
+				5F17E29923C8FF4800603B5D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FQKit;
+			productName = FQKit;
+			productReference = 5F17E29B23C8FF4800603B5D /* libFQKit.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -108,6 +242,9 @@
 					5F17E27F23C8FC8400603B5D = {
 						CreatedOnToolsVersion = 11.3;
 					};
+					5F17E29A23C8FF4800603B5D = {
+						CreatedOnToolsVersion = 11.3;
+					};
 				};
 			};
 			buildConfigurationList = 5F17E27B23C8FC8400603B5D /* Build configuration list for PBXProject "FQMap" */;
@@ -119,11 +256,18 @@
 				Base,
 			);
 			mainGroup = 5F17E27723C8FC8400603B5D;
+			packageReferences = (
+				5F17E2A723C9005E00603B5D /* XCRemoteSwiftPackageReference "DifferenceKit" */,
+				5F17E2AA23C9009600603B5D /* XCRemoteSwiftPackageReference "Alamofire" */,
+				5F17E2AD23C901B000603B5D /* XCRemoteSwiftPackageReference "XCGLogger" */,
+				5F17E2B123C9058400603B5D /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
 			productRefGroup = 5F17E28123C8FC8400603B5D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				5F17E27F23C8FC8400603B5D /* FQMap */,
+				5F17E29A23C8FF4800603B5D /* FQKit */,
 			);
 		};
 /* End PBXProject section */
@@ -152,7 +296,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5F17E29723C8FF4800603B5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F17E2B823C91CD900603B5D /* ExploreRequest.swift in Sources */,
+				5F17E2B523C9065000603B5D /* FoursquareAPI.swift in Sources */,
+				5F17E2BF23C9D66100603B5D /* ExploreResponse.swift in Sources */,
+				5F17E2C223C9D87B00603B5D /* Venue.swift in Sources */,
+				5F17E2BA23C9244400603B5D /* APIRequest.swift in Sources */,
+				5F17E29E23C8FF4800603B5D /* FQKit.swift in Sources */,
+				5F17E2BC23C9D53200603B5D /* Network.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5F17E2A423C8FFC100603B5D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5F17E29A23C8FF4800603B5D /* FQKit */;
+			targetProxy = 5F17E2A323C8FFC100603B5D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5F17E28E23C8FC8600603B5D /* LaunchScreen.storyboard */ = {
@@ -318,6 +484,30 @@
 			};
 			name = Release;
 		};
+		5F17E2A023C8FF4800603B5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5F17E2A123C8FF4800603B5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -339,7 +529,74 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		5F17E29F23C8FF4800603B5D /* Build configuration list for PBXNativeTarget "FQKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F17E2A023C8FF4800603B5D /* Debug */,
+				5F17E2A123C8FF4800603B5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5F17E2A723C9005E00603B5D /* XCRemoteSwiftPackageReference "DifferenceKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:ra1028/DifferenceKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.4;
+			};
+		};
+		5F17E2AA23C9009600603B5D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.9.1;
+			};
+		};
+		5F17E2AD23C901B000603B5D /* XCRemoteSwiftPackageReference "XCGLogger" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:DaveWoodCom/XCGLogger.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		5F17E2B123C9058400603B5D /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5F17E2A823C9005E00603B5D /* DifferenceKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5F17E2A723C9005E00603B5D /* XCRemoteSwiftPackageReference "DifferenceKit" */;
+			productName = DifferenceKit;
+		};
+		5F17E2AB23C9009600603B5D /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5F17E2AA23C9009600603B5D /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		5F17E2AE23C901B000603B5D /* XCGLogger */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5F17E2AD23C901B000603B5D /* XCRemoteSwiftPackageReference "XCGLogger" */;
+			productName = XCGLogger;
+		};
+		5F17E2B223C9058400603B5D /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5F17E2B123C9058400603B5D /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5F17E27823C8FC8400603B5D /* Project object */;
 }
