@@ -9,6 +9,18 @@
 import Foundation
 
 public struct Venue: Decodable {
-    let id: String
-    let name: String
+    public let id: String
+    public let name: String
+    public let location: Location
+}
+
+public extension Venue {
+    struct Location: Decodable {
+        let lat: Double
+        let lng: Double
+
+        public var coordinate: Coordiante2D {
+            .init(latitude: lat, longitude: lng)
+        }
+    }
 }

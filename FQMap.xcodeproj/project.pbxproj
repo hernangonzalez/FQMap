@@ -25,6 +25,12 @@
 		5F17E2BC23C9D53200603B5D /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F17E2BB23C9D53200603B5D /* Network.swift */; };
 		5F17E2BF23C9D66100603B5D /* ExploreResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F17E2BE23C9D66100603B5D /* ExploreResponse.swift */; };
 		5F17E2C223C9D87B00603B5D /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F17E2C123C9D87B00603B5D /* Venue.swift */; };
+		5F93568C23C9EE9100BA0677 /* MKMapView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F93568A23C9EE9100BA0677 /* MKMapView+Extension.swift */; };
+		5F93568D23C9EE9100BA0677 /* AppleMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F93568B23C9EE9100BA0677 /* AppleMapView.swift */; };
+		5F93568F23CA14CF00BA0677 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F93568E23CA14CF00BA0677 /* ContentViewModel.swift */; };
+		5F93569323CA169F00BA0677 /* AppleMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F93569223CA169F00BA0677 /* AppleMapViewModel.swift */; };
+		5F93569623CA19E800BA0677 /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F93569523CA19E800BA0677 /* Publisher+Extensions.swift */; };
+		5FB98A0A23CA32F900C833A0 /* MapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB98A0923CA32F900C833A0 /* MapAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +72,12 @@
 		5F17E2BB23C9D53200603B5D /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		5F17E2BE23C9D66100603B5D /* ExploreResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreResponse.swift; sourceTree = "<group>"; };
 		5F17E2C123C9D87B00603B5D /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
+		5F93568A23C9EE9100BA0677 /* MKMapView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MKMapView+Extension.swift"; sourceTree = "<group>"; };
+		5F93568B23C9EE9100BA0677 /* AppleMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleMapView.swift; sourceTree = "<group>"; };
+		5F93568E23CA14CF00BA0677 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		5F93569223CA169F00BA0677 /* AppleMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMapViewModel.swift; sourceTree = "<group>"; };
+		5F93569523CA19E800BA0677 /* Publisher+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Publisher+Extensions.swift"; sourceTree = "<group>"; };
+		5FB98A0923CA32F900C833A0 /* MapAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +147,7 @@
 		5F17E29C23C8FF4800603B5D /* FQKit */ = {
 			isa = PBXGroup;
 			children = (
+				5F93569423CA19DA00BA0677 /* Foundation */,
 				5F17E2C023C9D87300603B5D /* Models */,
 				5F17E2BD23C9D64100603B5D /* Foursquare */,
 				5F17E2B623C91C7900603B5D /* Network */,
@@ -146,7 +159,9 @@
 		5F17E2A223C8FF9800603B5D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5F93569023CA14D600BA0677 /* Map */,
 				5F17E28723C8FC8400603B5D /* ContentView.swift */,
+				5F93568E23CA14CF00BA0677 /* ContentViewModel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -183,6 +198,25 @@
 				5F17E2C123C9D87B00603B5D /* Venue.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5F93569023CA14D600BA0677 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				5F93568B23C9EE9100BA0677 /* AppleMapView.swift */,
+				5F93569223CA169F00BA0677 /* AppleMapViewModel.swift */,
+				5FB98A0923CA32F900C833A0 /* MapAnnotation.swift */,
+				5F93568A23C9EE9100BA0677 /* MKMapView+Extension.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		5F93569423CA19DA00BA0677 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				5F93569523CA19E800BA0677 /* Publisher+Extensions.swift */,
+			);
+			path = Foundation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,9 +324,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F93568D23C9EE9100BA0677 /* AppleMapView.swift in Sources */,
+				5F93569323CA169F00BA0677 /* AppleMapViewModel.swift in Sources */,
 				5F17E28423C8FC8400603B5D /* AppDelegate.swift in Sources */,
+				5F93568F23CA14CF00BA0677 /* ContentViewModel.swift in Sources */,
+				5F93568C23C9EE9100BA0677 /* MKMapView+Extension.swift in Sources */,
 				5F17E28623C8FC8400603B5D /* SceneDelegate.swift in Sources */,
 				5F17E28823C8FC8400603B5D /* ContentView.swift in Sources */,
+				5FB98A0A23CA32F900C833A0 /* MapAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +345,7 @@
 				5F17E2C223C9D87B00603B5D /* Venue.swift in Sources */,
 				5F17E2BA23C9244400603B5D /* APIRequest.swift in Sources */,
 				5F17E29E23C8FF4800603B5D /* FQKit.swift in Sources */,
+				5F93569623CA19E800BA0677 /* Publisher+Extensions.swift in Sources */,
 				5F17E2BC23C9D53200603B5D /* Network.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

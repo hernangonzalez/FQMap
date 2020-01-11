@@ -9,8 +9,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject private var viewModel: ContentViewModel
+    @State private var viewport: MapRegion = .init()
+
     var body: some View {
-        Text("Hello, World!")
+        ZStack {
+            AppleMapView(viewport: $viewModel.searchRegion,
+                         viewModel: viewModel.map)
+                .edgesIgnoringSafeArea(.all)
+        }
     }
 }
 

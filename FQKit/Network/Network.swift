@@ -12,6 +12,11 @@ import Alamofire
 
 enum Network {
     typealias Endpoint = URLRequestConvertible
+    static let queue: DispatchQueue = .init(label: "queue.network")
+}
+
+// MARK: - Public
+extension Network {
 
     static func response<Value: Decodable>(from endpoint: Endpoint) -> AnyPublisher<Value, Error> {
         let response = data(from: endpoint)
@@ -23,6 +28,7 @@ enum Network {
     }
 }
 
+// MARK: - Private
 private extension Network {
 
     static func data(from request: URLRequestConvertible) -> AnyPublisher<Data, Error> {
@@ -37,6 +43,7 @@ private extension Network {
                 }
             }
         }
+        .subscribe(on: queue)
         .eraseToAnyPublisher()
     }
 }

@@ -7,20 +7,12 @@
 //
 
 import UIKit
-import FQKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var op: Any?
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        debugPrint(FQKit.version)
-
-        op = FQKit.searchVenues(at: .init(latitude: 52.4, longitude: 4.6), radius: 1000)
-                .sink(receiveCompletion: { debugPrint($0) },
-                      receiveValue: { debugPrint($0) })
         return true
     }
 
