@@ -29,6 +29,7 @@
 		5F74D33F23CB8D1300D53EBD /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5F74D33E23CB8D1300D53EBD /* Kingfisher */; };
 		5F74D34123CB8D1300D53EBD /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 5F74D34023CB8D1300D53EBD /* KingfisherSwiftUI */; };
 		5F74D34323CBABB500D53EBD /* Codable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F74D34223CBABB500D53EBD /* Codable+Extensions.swift */; };
+		5F74D34723CBDA6700D53EBD /* VenueAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F74D34623CBDA6700D53EBD /* VenueAnnotationView.swift */; };
 		5F93568C23C9EE9100BA0677 /* MKMapView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F93568A23C9EE9100BA0677 /* MKMapView+Extension.swift */; };
 		5F93568D23C9EE9100BA0677 /* AppleMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F93568B23C9EE9100BA0677 /* AppleMapView.swift */; };
 		5F93568F23CA14CF00BA0677 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F93568E23CA14CF00BA0677 /* ContentViewModel.swift */; };
@@ -39,7 +40,6 @@
 		5FCB324323CB230600C05A33 /* VenueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCB324223CB230600C05A33 /* VenueViewModel.swift */; };
 		5FCB324A23CB406400C05A33 /* Permission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCB324923CB406400C05A33 /* Permission.swift */; };
 		5FCB324E23CB41BC00C05A33 /* VenueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCB324D23CB41BC00C05A33 /* VenueProvider.swift */; };
-		5FCB325823CB680A00C05A33 /* SFSymbol in Frameworks */ = {isa = PBXBuildFile; productRef = 5FCB325723CB680A00C05A33 /* SFSymbol */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +85,7 @@
 		5F74D33923CB8A6300D53EBD /* FoursquareResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareResponse.swift; sourceTree = "<group>"; };
 		5F74D33B23CB8A8700D53EBD /* VenueDetailsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDetailsResponse.swift; sourceTree = "<group>"; };
 		5F74D34223CBABB500D53EBD /* Codable+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Extensions.swift"; sourceTree = "<group>"; };
+		5F74D34623CBDA6700D53EBD /* VenueAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueAnnotationView.swift; sourceTree = "<group>"; };
 		5F93568A23C9EE9100BA0677 /* MKMapView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MKMapView+Extension.swift"; sourceTree = "<group>"; };
 		5F93568B23C9EE9100BA0677 /* AppleMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleMapView.swift; sourceTree = "<group>"; };
 		5F93568E23CA14CF00BA0677 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
@@ -106,7 +107,6 @@
 				5F17E2AC23C9009600603B5D /* Alamofire in Frameworks */,
 				5F17E2A923C9005E00603B5D /* DifferenceKit in Frameworks */,
 				5F17E2A623C8FFC600603B5D /* libFQKit.a in Frameworks */,
-				5FCB325823CB680A00C05A33 /* SFSymbol in Frameworks */,
 				5F74D33F23CB8D1300D53EBD /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				5FB98A0923CA32F900C833A0 /* MapAnnotation.swift */,
+				5F74D34623CBDA6700D53EBD /* VenueAnnotationView.swift */,
 			);
 			path = Annotations;
 			sourceTree = "<group>";
@@ -290,7 +291,6 @@
 			packageProductDependencies = (
 				5F17E2A823C9005E00603B5D /* DifferenceKit */,
 				5F17E2AB23C9009600603B5D /* Alamofire */,
-				5FCB325723CB680A00C05A33 /* SFSymbol */,
 				5F74D33E23CB8D1300D53EBD /* Kingfisher */,
 				5F74D34023CB8D1300D53EBD /* KingfisherSwiftUI */,
 			);
@@ -346,7 +346,6 @@
 			packageReferences = (
 				5F17E2A723C9005E00603B5D /* XCRemoteSwiftPackageReference "DifferenceKit" */,
 				5F17E2AA23C9009600603B5D /* XCRemoteSwiftPackageReference "Alamofire" */,
-				5FCB325623CB680A00C05A33 /* XCRemoteSwiftPackageReference "SFSymbol" */,
 				5F74D33D23CB8D1300D53EBD /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 5F17E28123C8FC8400603B5D /* Products */;
@@ -384,6 +383,7 @@
 				5F93568F23CA14CF00BA0677 /* ContentViewModel.swift in Sources */,
 				5F93568C23C9EE9100BA0677 /* MKMapView+Extension.swift in Sources */,
 				5FCB324123CB22ED00C05A33 /* VenueView.swift in Sources */,
+				5F74D34723CBDA6700D53EBD /* VenueAnnotationView.swift in Sources */,
 				5F17E28623C8FC8400603B5D /* SceneDelegate.swift in Sources */,
 				5F17E28823C8FC8400603B5D /* ContentView.swift in Sources */,
 				5FB98A0A23CA32F900C833A0 /* MapAnnotation.swift in Sources */,
@@ -680,14 +680,6 @@
 				minimumVersion = 5.12.0;
 			};
 		};
-		5FCB325623CB680A00C05A33 /* XCRemoteSwiftPackageReference "SFSymbol" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:Nirma/SFSymbol.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.2.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -720,11 +712,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5F17E2A723C9005E00603B5D /* XCRemoteSwiftPackageReference "DifferenceKit" */;
 			productName = DifferenceKit;
-		};
-		5FCB325723CB680A00C05A33 /* SFSymbol */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5FCB325623CB680A00C05A33 /* XCRemoteSwiftPackageReference "SFSymbol" */;
-			productName = SFSymbol;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

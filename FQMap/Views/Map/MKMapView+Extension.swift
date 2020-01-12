@@ -9,6 +9,7 @@ import DifferenceKit
 // MARK: - Update
 extension MKMapView {
 
+    @discardableResult
     func update(annotations rhs: [MapAnnotation]) -> Bool {
         let lhs = annotations.compactMap { $0 as? MapAnnotation }
 

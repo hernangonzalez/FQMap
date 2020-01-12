@@ -24,6 +24,7 @@ extension AppleMapView: UIViewRepresentable {
 
     func makeUIView(context: Context) -> MKMapView {
         let view = MKMapView(frame: .zero)
+        view.register(VenueAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         view.delegate = context.coordinator
         context.coordinator.installGestures(on: view)
         return view
@@ -32,9 +33,7 @@ extension AppleMapView: UIViewRepresentable {
     func updateUIView(_ view: MKMapView, context: Context) {
         assert(view.delegate != nil)
         view.showsUserLocation = viewModel.showsUserLocation
-        if view.update(annotations: viewModel.annotations) {
-            view.showAnnotations(viewModel.annotations, animated: true)
-        }
+        view.update(annotations: viewModel.annotations)
     }
 }
 
@@ -58,14 +57,17 @@ final class AppleMapCoordinator: NSObject {
     }
 }
 
+
 // MARK: - MKMapViewDelegate
 extension AppleMapCoordinator: MKMapViewDelegate {
 
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        guard let model = view.annotation as? MapAnnotation else {
-            return
+        if let model = view.annotation as? MapAnnotation {
+            self.view.selection = model
         }
-        self.view.selection = model
+        else if let cluster = view.annotation as? MKClusterAnnotation {
+            mapView.showAnnotations(cluster.memberAnnotations, animated: true)
+        }
     }
 
     func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {

@@ -34,7 +34,7 @@ private extension Network {
     static func data(from request: URLRequestConvertible) -> AnyPublisher<Data, Error> {
         Future { promise in
             let request = Alamofire.request(request)
-            request.responseData { response in
+            request.responseData(queue: queue) { response in
                 switch response.result {
                 case let .success(value):
                     promise(.success(value))
@@ -43,7 +43,6 @@ private extension Network {
                 }
             }
         }
-        .subscribe(on: queue)
         .eraseToAnyPublisher()
     }
 }
