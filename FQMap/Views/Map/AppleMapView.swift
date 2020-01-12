@@ -2,9 +2,6 @@
 //  MapView.swift
 //  Visits
 //
-//  Created by Hernan G. Gonzalez on 10/10/2019.
-//  Copyright © 2019 Indeba. All rights reserved.
-//
 
 import UIKit
 import SwiftUI
@@ -13,6 +10,7 @@ import MapKit
 typealias MapRegion = MKCoordinateRegion
 
 struct AppleMapView {
+    @Binding var selection: MapAnnotation?
     @Binding var viewport: MapRegion
     let viewModel: AppleMapViewModel
 }
@@ -27,20 +25,23 @@ extension AppleMapView: UIViewRepresentable {
     func makeUIView(context: Context) -> MKMapView {
         let view = MKMapView(frame: .zero)
         view.delegate = context.coordinator
-        view.showsUserLocation = true
         context.coordinator.installGestures(on: view)
         return view
     }
 
     func updateUIView(_ view: MKMapView, context: Context) {
         assert(view.delegate != nil)
+        view.showsUserLocation = viewModel.showsUserLocation
         view.update(annotations: viewModel.annotations)
+        debugPrint(view.annotations.count)
     }
 }
 
 // MARK: - Coordinator
 final class AppleMapCoordinator: NSObject {
+    private let threshold: CLLocationDistance = 100
     private let view: AppleMapView
+    private var lastUserLocation: CLLocation?
 
     init(with view: AppleMapView) {
         self.view = view
@@ -49,8 +50,34 @@ final class AppleMapCoordinator: NSObject {
 
 // MARK: - MKMapViewDelegate
 extension AppleMapCoordinator: MKMapViewDelegate {
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        return nil
+
+    func mapView(_ mapView: MKMapView, didAdd views: [MKAnnotationView]) {
+        views.forEach {
+            $0.displayPriority = .required
+        }
+    }
+
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        guard let model = view.annotation as? MapAnnotation else {
+            return
+        }
+        self.view.selection = model
+    }
+
+    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
+        self.view.selection = nil
+    }
+
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+        guard let update = userLocation.location else {
+            return
+        }
+
+        let delta = lastUserLocation?.distance(from: update)
+        let needsUdapte = delta.map { $0 >= threshold } ?? true
+        if needsUdapte {
+            view.viewport = mapView.region
+        }
     }
 }
 

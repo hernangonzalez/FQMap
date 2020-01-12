@@ -2,9 +2,6 @@
 //  Publisher+Extensions.swift
 //  Visits
 //
-//  Created by Hernan G. Gonzalez on 24/09/2019.
-//  Copyright © 2019 Indeba. All rights reserved.
-//
 
 import Foundation
 import Combine
@@ -19,5 +16,19 @@ public extension Publisher {
         return self.catch { error -> AnyPublisher<Output, Never> in
             return other
         }.eraseToAnyPublisher()
+    }
+}
+
+public typealias CancellableSet = Array<AnyCancellable>
+
+public extension CancellableSet {
+    static func += (lhs: inout Array<Element>, rhs: Element) {
+        lhs.append(rhs)
+    }
+}
+
+public extension CancellableSet {
+    func cancel() {
+        forEach { $0.cancel() }
     }
 }

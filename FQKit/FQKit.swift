@@ -9,12 +9,13 @@ import Combine
 
 public class FQKit {
     public static let version = 1
+    public init() { }
 }
 
 public extension FQKit {
 
     /// Search venues around a point.
-    static func searchVenues(at coordiante: Coordiante2D, radius: Double) -> AnyPublisher<[Venue], Error> {
+    func searchVenues(at coordiante: Coordiante2D, radius: Double) -> AnyPublisher<[Venue], Error> {
         let request = ExploreRequest(coordiante: coordiante, radius: radius)
         let api = FoursquareAPI.explore(request: request)
         let response = Network.response(from: api) as AnyPublisher<FoursquareResponse<ExploreResponse>, Error>

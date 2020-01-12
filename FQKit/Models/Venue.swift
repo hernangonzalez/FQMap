@@ -24,3 +24,9 @@ public extension Venue {
         }
     }
 }
+
+public extension Array where Element == Venue {
+    func first(with id: String) -> Venue? {
+        first { $0.id == id}
+    }
+}

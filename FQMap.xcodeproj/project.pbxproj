@@ -17,8 +17,6 @@
 		5F17E2A623C8FFC600603B5D /* libFQKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F17E29B23C8FF4800603B5D /* libFQKit.a */; };
 		5F17E2A923C9005E00603B5D /* DifferenceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5F17E2A823C9005E00603B5D /* DifferenceKit */; };
 		5F17E2AC23C9009600603B5D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5F17E2AB23C9009600603B5D /* Alamofire */; };
-		5F17E2AF23C901B000603B5D /* XCGLogger in Frameworks */ = {isa = PBXBuildFile; productRef = 5F17E2AE23C901B000603B5D /* XCGLogger */; };
-		5F17E2B323C9058400603B5D /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 5F17E2B223C9058400603B5D /* Swinject */; };
 		5F17E2B523C9065000603B5D /* FoursquareAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F17E2B423C9065000603B5D /* FoursquareAPI.swift */; };
 		5F17E2B823C91CD900603B5D /* ExploreRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F17E2B723C91CD900603B5D /* ExploreRequest.swift */; };
 		5F17E2BA23C9244400603B5D /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F17E2B923C9244400603B5D /* APIRequest.swift */; };
@@ -31,6 +29,10 @@
 		5F93569323CA169F00BA0677 /* AppleMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F93569223CA169F00BA0677 /* AppleMapViewModel.swift */; };
 		5F93569623CA19E800BA0677 /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F93569523CA19E800BA0677 /* Publisher+Extensions.swift */; };
 		5FB98A0A23CA32F900C833A0 /* MapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB98A0923CA32F900C833A0 /* MapAnnotation.swift */; };
+		5FCB324123CB22ED00C05A33 /* VenueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCB324023CB22ED00C05A33 /* VenueView.swift */; };
+		5FCB324323CB230600C05A33 /* VenueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCB324223CB230600C05A33 /* VenueViewModel.swift */; };
+		5FCB324A23CB406400C05A33 /* Permission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCB324923CB406400C05A33 /* Permission.swift */; };
+		5FCB324E23CB41BC00C05A33 /* VenueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCB324D23CB41BC00C05A33 /* VenueProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,10 @@
 		5F93569223CA169F00BA0677 /* AppleMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMapViewModel.swift; sourceTree = "<group>"; };
 		5F93569523CA19E800BA0677 /* Publisher+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Publisher+Extensions.swift"; sourceTree = "<group>"; };
 		5FB98A0923CA32F900C833A0 /* MapAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotation.swift; sourceTree = "<group>"; };
+		5FCB324023CB22ED00C05A33 /* VenueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueView.swift; sourceTree = "<group>"; };
+		5FCB324223CB230600C05A33 /* VenueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueViewModel.swift; sourceTree = "<group>"; };
+		5FCB324923CB406400C05A33 /* Permission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Permission.swift; sourceTree = "<group>"; };
+		5FCB324D23CB41BC00C05A33 /* VenueProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,10 +92,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F17E2AC23C9009600603B5D /* Alamofire in Frameworks */,
-				5F17E2B323C9058400603B5D /* Swinject in Frameworks */,
 				5F17E2A923C9005E00603B5D /* DifferenceKit in Frameworks */,
 				5F17E2A623C8FFC600603B5D /* libFQKit.a in Frameworks */,
-				5F17E2AF23C901B000603B5D /* XCGLogger in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +129,7 @@
 		5F17E28223C8FC8400603B5D /* FQMap */ = {
 			isa = PBXGroup;
 			children = (
+				5FCB324823CB400000C05A33 /* Modules */,
 				5F17E2A223C8FF9800603B5D /* Views */,
 				5F17E28323C8FC8400603B5D /* AppDelegate.swift */,
 				5F17E28523C8FC8400603B5D /* SceneDelegate.swift */,
@@ -159,6 +164,7 @@
 		5F17E2A223C8FF9800603B5D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5FCB323F23CB22CC00C05A33 /* Detail */,
 				5F93569023CA14D600BA0677 /* Map */,
 				5F17E28723C8FC8400603B5D /* ContentView.swift */,
 				5F93568E23CA14CF00BA0677 /* ContentViewModel.swift */,
@@ -219,6 +225,24 @@
 			path = Foundation;
 			sourceTree = "<group>";
 		};
+		5FCB323F23CB22CC00C05A33 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				5FCB324023CB22ED00C05A33 /* VenueView.swift */,
+				5FCB324223CB230600C05A33 /* VenueViewModel.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		5FCB324823CB400000C05A33 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				5FCB324923CB406400C05A33 /* Permission.swift */,
+				5FCB324D23CB41BC00C05A33 /* VenueProvider.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -233,14 +257,13 @@
 			buildRules = (
 			);
 			dependencies = (
+				5FCB324723CB3D4200C05A33 /* PBXTargetDependency */,
 				5F17E2A423C8FFC100603B5D /* PBXTargetDependency */,
 			);
 			name = FQMap;
 			packageProductDependencies = (
 				5F17E2A823C9005E00603B5D /* DifferenceKit */,
 				5F17E2AB23C9009600603B5D /* Alamofire */,
-				5F17E2AE23C901B000603B5D /* XCGLogger */,
-				5F17E2B223C9058400603B5D /* Swinject */,
 			);
 			productName = FQMap;
 			productReference = 5F17E28023C8FC8400603B5D /* FQMap.app */;
@@ -257,6 +280,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				5FCB324523CB3D2700C05A33 /* PBXTargetDependency */,
 			);
 			name = FQKit;
 			productName = FQKit;
@@ -293,8 +317,6 @@
 			packageReferences = (
 				5F17E2A723C9005E00603B5D /* XCRemoteSwiftPackageReference "DifferenceKit" */,
 				5F17E2AA23C9009600603B5D /* XCRemoteSwiftPackageReference "Alamofire" */,
-				5F17E2AD23C901B000603B5D /* XCRemoteSwiftPackageReference "XCGLogger" */,
-				5F17E2B123C9058400603B5D /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
 			productRefGroup = 5F17E28123C8FC8400603B5D /* Products */;
 			projectDirPath = "";
@@ -326,12 +348,16 @@
 			files = (
 				5F93568D23C9EE9100BA0677 /* AppleMapView.swift in Sources */,
 				5F93569323CA169F00BA0677 /* AppleMapViewModel.swift in Sources */,
+				5FCB324323CB230600C05A33 /* VenueViewModel.swift in Sources */,
 				5F17E28423C8FC8400603B5D /* AppDelegate.swift in Sources */,
 				5F93568F23CA14CF00BA0677 /* ContentViewModel.swift in Sources */,
 				5F93568C23C9EE9100BA0677 /* MKMapView+Extension.swift in Sources */,
+				5FCB324123CB22ED00C05A33 /* VenueView.swift in Sources */,
 				5F17E28623C8FC8400603B5D /* SceneDelegate.swift in Sources */,
 				5F17E28823C8FC8400603B5D /* ContentView.swift in Sources */,
 				5FB98A0A23CA32F900C833A0 /* MapAnnotation.swift in Sources */,
+				5FCB324A23CB406400C05A33 /* Permission.swift in Sources */,
+				5FCB324E23CB41BC00C05A33 /* VenueProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +383,14 @@
 			isa = PBXTargetDependency;
 			target = 5F17E29A23C8FF4800603B5D /* FQKit */;
 			targetProxy = 5F17E2A323C8FFC100603B5D /* PBXContainerItemProxy */;
+		};
+		5FCB324523CB3D2700C05A33 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 5FCB324423CB3D2700C05A33 /* Alamofire */;
+		};
+		5FCB324723CB3D4200C05A33 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 5FCB324623CB3D4200C05A33 /* DifferenceKit */;
 		};
 /* End PBXTargetDependency section */
 
@@ -490,8 +524,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"FQMap/Preview Content\"";
+				DEVELOPMENT_TEAM = 76F4MTSZD3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = FQMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -500,6 +536,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hernan.dott.FQMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = xc_wildcard;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -509,8 +546,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"FQMap/Preview Content\"";
+				DEVELOPMENT_TEAM = 76F4MTSZD3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = FQMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -519,6 +558,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hernan.dott.FQMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = xc_wildcard;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -597,22 +637,6 @@
 				minimumVersion = 4.9.1;
 			};
 		};
-		5F17E2AD23C901B000603B5D /* XCRemoteSwiftPackageReference "XCGLogger" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:DaveWoodCom/XCGLogger.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 7.0.0;
-			};
-		};
-		5F17E2B123C9058400603B5D /* XCRemoteSwiftPackageReference "Swinject" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:Swinject/Swinject.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.7.1;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -626,15 +650,15 @@
 			package = 5F17E2AA23C9009600603B5D /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-		5F17E2AE23C901B000603B5D /* XCGLogger */ = {
+		5FCB324423CB3D2700C05A33 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5F17E2AD23C901B000603B5D /* XCRemoteSwiftPackageReference "XCGLogger" */;
-			productName = XCGLogger;
+			package = 5F17E2AA23C9009600603B5D /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
-		5F17E2B223C9058400603B5D /* Swinject */ = {
+		5FCB324623CB3D4200C05A33 /* DifferenceKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5F17E2B123C9058400603B5D /* XCRemoteSwiftPackageReference "Swinject" */;
-			productName = Swinject;
+			package = 5F17E2A723C9005E00603B5D /* XCRemoteSwiftPackageReference "DifferenceKit" */;
+			productName = DifferenceKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

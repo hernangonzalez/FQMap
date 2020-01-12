@@ -10,13 +10,16 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject private var viewModel: ContentViewModel
-    @State private var viewport: MapRegion = .init()
 
     var body: some View {
         ZStack {
-            AppleMapView(viewport: $viewModel.searchRegion,
+            AppleMapView(selection: $viewModel.selection,
+                         viewport: $viewModel.searchRegion,
                          viewModel: viewModel.map)
                 .edgesIgnoringSafeArea(.all)
+        }
+        .sheet(isPresented: $viewModel.presentDetail) {
+            VenueView(viewModel: self.viewModel.venueDetail())
         }
     }
 }

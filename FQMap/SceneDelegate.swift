@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftUI
+import CoreLocation
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
