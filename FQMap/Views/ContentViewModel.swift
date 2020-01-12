@@ -13,13 +13,37 @@ import FQKit
 import CoreLocation
 
 class ContentViewModel: ObservableObject {
-    private var cancellables: CancellableSet = .init()
-    private var venues: CurrentValueSubject<[Venue], Never> = .init([])
+    // MARK: Dependencies
     private let permission: Permission = CLLocationManager()
     private let provider: VenueProvider = FQKit()
 
-    @Published var map: AppleMapViewModel = .init()
-    @Published var presentDetail: Bool = false
+    // MARK: Combine
+    private var cancellables: CancellableSet = .init()
+    private let needsUpdate: PassthroughSubject<Void, Never> = .init()
+    var objectWillChange: AnyPublisher<Void, Never> {
+        needsUpdate.eraseToAnyPublisher()
+    }
+
+    // MARK: Data
+    private var venues: [Venue] = .init() {
+        willSet { needsUpdate.send() }
+    }
+
+    // MARK: Presentation
+    var presentDetail: Bool = false {
+        willSet { needsUpdate.send() }
+    }
+
+    var map: AppleMapViewModel {
+        .init(from: venues)
+    }
+
+    var venueDetail: VenueViewModel {
+        let model = selectedVenue.map {
+            VenueViewModel(from: $0)
+        }
+        return model ?? .init()
+    }
 
     var searchRegion: MapRegion = .init() {
         didSet {
@@ -34,11 +58,8 @@ class ContentViewModel: ObservableObject {
         }
     }
 
-    func venueDetail() -> VenueViewModel {
-        let model = selectedVenue.map {
-            VenueViewModel(from: $0)
-        }
-        return model ?? .init()
+    func viewDidAppear() {
+        permission.enableIfNeeded()
     }
 }
 
@@ -49,23 +70,16 @@ private extension ContentViewModel {
         let center = searchRegion.center
         let radius = max(searchRegion.span.latitudeDelta, searchRegion.span.longitudeDelta)
         let places = provider.searchVenues(at: center, radius: radius)
-            .share()
-            .print()
 
         cancellables += places
             .catchError(with: .empty)
-            .assign(to: \.venues.value, on: self)
-
-        cancellables += places
-            .catchError(with: .empty)
-            .map { AppleMapViewModel(from: $0) }
             .receive(on: DispatchQueue.main)
-            .assign(to: \.map, on: self)
+            .assign(to: \.venues, on: self)
     }
 
     var selectedVenue: Venue? {
         selection.flatMap {
-            venues.value.first(with: $0.venueId)
+            venues.first(with: $0.venueId)
         }
     }
 }

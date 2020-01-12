@@ -9,7 +9,7 @@ import DifferenceKit
 // MARK: - Update
 extension MKMapView {
 
-    func update(annotations rhs: [MapAnnotation]) {
+    func update(annotations rhs: [MapAnnotation]) -> Bool {
         let lhs = annotations.compactMap { $0 as? MapAnnotation }
 
         let changeset = StagedChangeset(source: lhs, target: rhs)
@@ -24,5 +24,30 @@ extension MKMapView {
             }
             addAnnotations(inserted)
         }
+
+        return !changeset.isEmpty
+    }
+}
+
+// MARK: - Annotations
+extension MKAnnotationView {
+    static var identifier: String {
+        return String(describing: self)
+    }
+
+    convenience init(annotation: MKAnnotation) {
+        self.init(annotation: annotation,
+                  reuseIdentifier: type(of: self).identifier)
+    }
+}
+
+extension MKMapView {
+
+    func loadAnnotation<View: MKAnnotationView>(with annotation: MKAnnotation) -> View? {
+        return dequeueReusableAnnotationView(withIdentifier: View.identifier) as? View
+    }
+
+    func register<View: MKAnnotationView>(_ type: View.Type) {
+        register(type, forAnnotationViewWithReuseIdentifier: View.identifier)
     }
 }

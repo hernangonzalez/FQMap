@@ -18,8 +18,9 @@ struct ContentView: View {
                          viewModel: viewModel.map)
                 .edgesIgnoringSafeArea(.all)
         }
+        .onAppear(perform: viewModel.viewDidAppear)
         .sheet(isPresented: $viewModel.presentDetail) {
-            VenueView(viewModel: self.viewModel.venueDetail())
+            VenueView(viewModel: self.viewModel.venueDetail)
         }
     }
 }

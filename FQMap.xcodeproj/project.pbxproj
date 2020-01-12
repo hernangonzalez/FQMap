@@ -33,6 +33,7 @@
 		5FCB324323CB230600C05A33 /* VenueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCB324223CB230600C05A33 /* VenueViewModel.swift */; };
 		5FCB324A23CB406400C05A33 /* Permission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCB324923CB406400C05A33 /* Permission.swift */; };
 		5FCB324E23CB41BC00C05A33 /* VenueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCB324D23CB41BC00C05A33 /* VenueProvider.swift */; };
+		5FCB325823CB680A00C05A33 /* SFSymbol in Frameworks */ = {isa = PBXBuildFile; productRef = 5FCB325723CB680A00C05A33 /* SFSymbol */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 				5F17E2AC23C9009600603B5D /* Alamofire in Frameworks */,
 				5F17E2A923C9005E00603B5D /* DifferenceKit in Frameworks */,
 				5F17E2A623C8FFC600603B5D /* libFQKit.a in Frameworks */,
+				5FCB325823CB680A00C05A33 /* SFSymbol in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,9 +211,9 @@
 		5F93569023CA14D600BA0677 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				5FCB325123CB63D400C05A33 /* Annotations */,
 				5F93568B23C9EE9100BA0677 /* AppleMapView.swift */,
 				5F93569223CA169F00BA0677 /* AppleMapViewModel.swift */,
-				5FB98A0923CA32F900C833A0 /* MapAnnotation.swift */,
 				5F93568A23C9EE9100BA0677 /* MKMapView+Extension.swift */,
 			);
 			path = Map;
@@ -243,6 +245,14 @@
 			path = Modules;
 			sourceTree = "<group>";
 		};
+		5FCB325123CB63D400C05A33 /* Annotations */ = {
+			isa = PBXGroup;
+			children = (
+				5FB98A0923CA32F900C833A0 /* MapAnnotation.swift */,
+			);
+			path = Annotations;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -264,6 +274,7 @@
 			packageProductDependencies = (
 				5F17E2A823C9005E00603B5D /* DifferenceKit */,
 				5F17E2AB23C9009600603B5D /* Alamofire */,
+				5FCB325723CB680A00C05A33 /* SFSymbol */,
 			);
 			productName = FQMap;
 			productReference = 5F17E28023C8FC8400603B5D /* FQMap.app */;
@@ -317,6 +328,7 @@
 			packageReferences = (
 				5F17E2A723C9005E00603B5D /* XCRemoteSwiftPackageReference "DifferenceKit" */,
 				5F17E2AA23C9009600603B5D /* XCRemoteSwiftPackageReference "Alamofire" */,
+				5FCB325623CB680A00C05A33 /* XCRemoteSwiftPackageReference "SFSymbol" */,
 			);
 			productRefGroup = 5F17E28123C8FC8400603B5D /* Products */;
 			projectDirPath = "";
@@ -637,6 +649,14 @@
 				minimumVersion = 4.9.1;
 			};
 		};
+		5FCB325623CB680A00C05A33 /* XCRemoteSwiftPackageReference "SFSymbol" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:Nirma/SFSymbol.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -659,6 +679,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5F17E2A723C9005E00603B5D /* XCRemoteSwiftPackageReference "DifferenceKit" */;
 			productName = DifferenceKit;
+		};
+		5FCB325723CB680A00C05A33 /* SFSymbol */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5FCB325623CB680A00C05A33 /* XCRemoteSwiftPackageReference "SFSymbol" */;
+			productName = SFSymbol;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

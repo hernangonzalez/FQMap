@@ -32,8 +32,9 @@ extension AppleMapView: UIViewRepresentable {
     func updateUIView(_ view: MKMapView, context: Context) {
         assert(view.delegate != nil)
         view.showsUserLocation = viewModel.showsUserLocation
-        view.update(annotations: viewModel.annotations)
-        debugPrint(view.annotations.count)
+        if view.update(annotations: viewModel.annotations) {
+            view.showAnnotations(view.annotations, animated: true)
+        }
     }
 }
 
@@ -50,12 +51,6 @@ final class AppleMapCoordinator: NSObject {
 
 // MARK: - MKMapViewDelegate
 extension AppleMapCoordinator: MKMapViewDelegate {
-
-    func mapView(_ mapView: MKMapView, didAdd views: [MKAnnotationView]) {
-        views.forEach {
-            $0.displayPriority = .required
-        }
-    }
 
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         guard let model = view.annotation as? MapAnnotation else {
