@@ -39,9 +39,7 @@ class ContentViewModel: ObservableObject {
     }
 
     var venueDetail: VenueViewModel {
-        let model = selectedVenue.map {
-            VenueViewModel(from: $0)
-        }
+        let model = selection.map { VenueViewModel(from: $0) }
         return model ?? .init()
     }
 
@@ -68,18 +66,12 @@ private extension ContentViewModel {
         cancellables.cancel()
 
         let center = searchRegion.center
-        let radius = max(searchRegion.span.latitudeDelta, searchRegion.span.longitudeDelta)
+        let radius = searchRegion.maxDistance
         let places = provider.searchVenues(at: center, radius: radius)
 
         cancellables += places
             .catchError(with: .empty)
             .receive(on: DispatchQueue.main)
             .assign(to: \.venues, on: self)
-    }
-
-    var selectedVenue: Venue? {
-        selection.flatMap {
-            venues.first(with: $0.venueId)
-        }
     }
 }

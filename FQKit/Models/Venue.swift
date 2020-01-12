@@ -8,25 +8,40 @@
 
 import Foundation
 
-public struct Venue: Decodable {
+public struct Venue {
     public let id: String
     public let name: String
-    public let location: Location
+    public let coordinate: Coordiante2D
+    public let address: String
+    public let description: String
+    public let photos: [Photo]
 }
 
-public extension Venue {
-    struct Location: Decodable {
-        let lat: Double
-        let lng: Double
+// MARK: - Photo
+public struct Photo: Decodable {
+    public let id: String
+    let prefix: String
+    let suffix: String
+    let width: Int
+    let height: Int
+}
 
-        public var coordinate: Coordiante2D {
-            .init(latitude: lat, longitude: lng)
+public extension Photo {
+    var url: URL? {
+        URL(string: prefix).map {
+            $0.appendingPathComponent("\(width)x\(height)").appendingPathComponent(suffix)
         }
     }
 }
 
-public extension Array where Element == Venue {
-    func first(with id: String) -> Venue? {
-        first { $0.id == id}
+// MARK: - Location
+struct Location: Decodable {
+    let lat: Double
+    let lng: Double
+    let address: String?
+
+    var coordinate: Coordiante2D {
+        .init(latitude: lat, longitude: lng)
     }
 }
+

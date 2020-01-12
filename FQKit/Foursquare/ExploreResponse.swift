@@ -8,16 +8,30 @@
 
 import Foundation
 
-struct FoursquareResponse<Value: Decodable>: Decodable {
-    struct Meta: Decodable {
-        let code: Int
-        let requestId: String
-    }
-
-    let meta: Meta
-    let response: Value
+struct ExploreVenue: Decodable {
+    let id: String
+    let name: String
+    let location: Location
 }
 
 struct ExploreResponse: Decodable {
-    let venues: [Venue]
+    private let venues: [ExploreVenue]
+}
+
+extension ExploreResponse {
+    var items: [Venue] {
+        venues.map { Venue(from: $0) }
+    }
+}
+
+// MARK: - Venue
+extension Venue {
+    init(from other: ExploreVenue) {
+        id = other.id
+        name = other.name
+        coordinate = other.location.coordinate
+        address = .init()
+        description = .init()
+        photos = []
+    }
 }

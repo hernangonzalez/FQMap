@@ -25,7 +25,9 @@ extension MKMapView {
             addAnnotations(inserted)
         }
 
-        return !changeset.isEmpty
+        return changeset.contains {
+            !$0.elementInserted.isEmpty || !$0.elementDeleted.isEmpty
+        }
     }
 }
 

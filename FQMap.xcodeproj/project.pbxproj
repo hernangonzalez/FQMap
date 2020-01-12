@@ -23,6 +23,12 @@
 		5F17E2BC23C9D53200603B5D /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F17E2BB23C9D53200603B5D /* Network.swift */; };
 		5F17E2BF23C9D66100603B5D /* ExploreResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F17E2BE23C9D66100603B5D /* ExploreResponse.swift */; };
 		5F17E2C223C9D87B00603B5D /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F17E2C123C9D87B00603B5D /* Venue.swift */; };
+		5F74D33823CB88DB00D53EBD /* VenueDetailsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F74D33723CB88DB00D53EBD /* VenueDetailsRequest.swift */; };
+		5F74D33A23CB8A6300D53EBD /* FoursquareResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F74D33923CB8A6300D53EBD /* FoursquareResponse.swift */; };
+		5F74D33C23CB8A8700D53EBD /* VenueDetailsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F74D33B23CB8A8700D53EBD /* VenueDetailsResponse.swift */; };
+		5F74D33F23CB8D1300D53EBD /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5F74D33E23CB8D1300D53EBD /* Kingfisher */; };
+		5F74D34123CB8D1300D53EBD /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 5F74D34023CB8D1300D53EBD /* KingfisherSwiftUI */; };
+		5F74D34323CBABB500D53EBD /* Codable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F74D34223CBABB500D53EBD /* Codable+Extensions.swift */; };
 		5F93568C23C9EE9100BA0677 /* MKMapView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F93568A23C9EE9100BA0677 /* MKMapView+Extension.swift */; };
 		5F93568D23C9EE9100BA0677 /* AppleMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F93568B23C9EE9100BA0677 /* AppleMapView.swift */; };
 		5F93568F23CA14CF00BA0677 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F93568E23CA14CF00BA0677 /* ContentViewModel.swift */; };
@@ -75,6 +81,10 @@
 		5F17E2BB23C9D53200603B5D /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		5F17E2BE23C9D66100603B5D /* ExploreResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreResponse.swift; sourceTree = "<group>"; };
 		5F17E2C123C9D87B00603B5D /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
+		5F74D33723CB88DB00D53EBD /* VenueDetailsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDetailsRequest.swift; sourceTree = "<group>"; };
+		5F74D33923CB8A6300D53EBD /* FoursquareResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareResponse.swift; sourceTree = "<group>"; };
+		5F74D33B23CB8A8700D53EBD /* VenueDetailsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDetailsResponse.swift; sourceTree = "<group>"; };
+		5F74D34223CBABB500D53EBD /* Codable+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Extensions.swift"; sourceTree = "<group>"; };
 		5F93568A23C9EE9100BA0677 /* MKMapView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MKMapView+Extension.swift"; sourceTree = "<group>"; };
 		5F93568B23C9EE9100BA0677 /* AppleMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleMapView.swift; sourceTree = "<group>"; };
 		5F93568E23CA14CF00BA0677 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
@@ -92,10 +102,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F74D34123CB8D1300D53EBD /* KingfisherSwiftUI in Frameworks */,
 				5F17E2AC23C9009600603B5D /* Alamofire in Frameworks */,
 				5F17E2A923C9005E00603B5D /* DifferenceKit in Frameworks */,
 				5F17E2A623C8FFC600603B5D /* libFQKit.a in Frameworks */,
 				5FCB325823CB680A00C05A33 /* SFSymbol in Frameworks */,
+				5F74D33F23CB8D1300D53EBD /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +207,9 @@
 			children = (
 				5F17E2B723C91CD900603B5D /* ExploreRequest.swift */,
 				5F17E2BE23C9D66100603B5D /* ExploreResponse.swift */,
+				5F74D33723CB88DB00D53EBD /* VenueDetailsRequest.swift */,
+				5F74D33B23CB8A8700D53EBD /* VenueDetailsResponse.swift */,
+				5F74D33923CB8A6300D53EBD /* FoursquareResponse.swift */,
 				5F17E2B423C9065000603B5D /* FoursquareAPI.swift */,
 			);
 			path = Foursquare;
@@ -223,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				5F93569523CA19E800BA0677 /* Publisher+Extensions.swift */,
+				5F74D34223CBABB500D53EBD /* Codable+Extensions.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -275,6 +291,8 @@
 				5F17E2A823C9005E00603B5D /* DifferenceKit */,
 				5F17E2AB23C9009600603B5D /* Alamofire */,
 				5FCB325723CB680A00C05A33 /* SFSymbol */,
+				5F74D33E23CB8D1300D53EBD /* Kingfisher */,
+				5F74D34023CB8D1300D53EBD /* KingfisherSwiftUI */,
 			);
 			productName = FQMap;
 			productReference = 5F17E28023C8FC8400603B5D /* FQMap.app */;
@@ -329,6 +347,7 @@
 				5F17E2A723C9005E00603B5D /* XCRemoteSwiftPackageReference "DifferenceKit" */,
 				5F17E2AA23C9009600603B5D /* XCRemoteSwiftPackageReference "Alamofire" */,
 				5FCB325623CB680A00C05A33 /* XCRemoteSwiftPackageReference "SFSymbol" */,
+				5F74D33D23CB8D1300D53EBD /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 5F17E28123C8FC8400603B5D /* Products */;
 			projectDirPath = "";
@@ -377,13 +396,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F74D34323CBABB500D53EBD /* Codable+Extensions.swift in Sources */,
 				5F17E2B823C91CD900603B5D /* ExploreRequest.swift in Sources */,
+				5F74D33823CB88DB00D53EBD /* VenueDetailsRequest.swift in Sources */,
 				5F17E2B523C9065000603B5D /* FoursquareAPI.swift in Sources */,
 				5F17E2BF23C9D66100603B5D /* ExploreResponse.swift in Sources */,
 				5F17E2C223C9D87B00603B5D /* Venue.swift in Sources */,
 				5F17E2BA23C9244400603B5D /* APIRequest.swift in Sources */,
 				5F17E29E23C8FF4800603B5D /* FQKit.swift in Sources */,
+				5F74D33A23CB8A6300D53EBD /* FoursquareResponse.swift in Sources */,
 				5F93569623CA19E800BA0677 /* Publisher+Extensions.swift in Sources */,
+				5F74D33C23CB8A8700D53EBD /* VenueDetailsResponse.swift in Sources */,
 				5F17E2BC23C9D53200603B5D /* Network.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -649,6 +672,14 @@
 				minimumVersion = 4.9.1;
 			};
 		};
+		5F74D33D23CB8D1300D53EBD /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.12.0;
+			};
+		};
 		5FCB325623CB680A00C05A33 /* XCRemoteSwiftPackageReference "SFSymbol" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:Nirma/SFSymbol.git";
@@ -669,6 +700,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5F17E2AA23C9009600603B5D /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		5F74D33E23CB8D1300D53EBD /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5F74D33D23CB8D1300D53EBD /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		5F74D34023CB8D1300D53EBD /* KingfisherSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5F74D33D23CB8D1300D53EBD /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = KingfisherSwiftUI;
 		};
 		5FCB324423CB3D2700C05A33 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;

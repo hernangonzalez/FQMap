@@ -12,6 +12,7 @@ import FQKit
 
 protocol VenueProvider {
     func searchVenues(at coordiante: Coordiante2D, radius: Double) -> AnyPublisher<[Venue], Error>
+    func venueDetails(venueId: String) -> AnyPublisher<Venue, Error>
 }
 
 extension FQKit: VenueProvider {

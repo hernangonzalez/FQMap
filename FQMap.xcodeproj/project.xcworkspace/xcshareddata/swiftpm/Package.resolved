@@ -1,0 +1,43 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Alamofire",
+        "repositoryURL": "git@github.com:Alamofire/Alamofire.git",
+        "state": {
+          "branch": null,
+          "revision": "747c8db8d57b68d5e35275f10c92d55f982adbd4",
+          "version": "4.9.1"
+        }
+      },
+      {
+        "package": "DifferenceKit",
+        "repositoryURL": "git@github.com:ra1028/DifferenceKit.git",
+        "state": {
+          "branch": null,
+          "revision": "bf0488b4683fbe113e8db9cf4dcf0d265ce39cfa",
+          "version": "1.1.4"
+        }
+      },
+      {
+        "package": "Kingfisher",
+        "repositoryURL": "git@github.com:onevcat/Kingfisher.git",
+        "state": {
+          "branch": null,
+          "revision": "2f9d171f17869768f6dbec1d039b851e2503af35",
+          "version": "5.12.0"
+        }
+      },
+      {
+        "package": "SFSymbol",
+        "repositoryURL": "git@github.com:Nirma/SFSymbol.git",
+        "state": {
+          "branch": null,
+          "revision": "5eba1ce4fc19b2f5aca2208b5927c544e0e89963",
+          "version": "0.2.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

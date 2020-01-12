@@ -33,8 +33,17 @@ extension AppleMapView: UIViewRepresentable {
         assert(view.delegate != nil)
         view.showsUserLocation = viewModel.showsUserLocation
         if view.update(annotations: viewModel.annotations) {
-            view.showAnnotations(view.annotations, animated: true)
+            view.showAnnotations(viewModel.annotations, animated: true)
         }
+    }
+}
+
+// MARK: - MapRegion
+extension MapRegion {
+    var maxDistance: CLLocationDistance {
+        let lhs = CLLocation(latitude: center.latitude, longitude: center.longitude)
+        let rhs = CLLocation(latitude: center.latitude + span.latitudeDelta, longitude: center.longitude + span.longitudeDelta)
+        return lhs.distance(from: rhs).rounded()
     }
 }
 

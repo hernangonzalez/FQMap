@@ -16,8 +16,13 @@ class MapAnnotation: MKPointAnnotation {
     init(from venue: Venue) {
         venueId = venue.id
         super.init()
-        coordinate = venue.location.coordinate
+        coordinate = venue.coordinate
         title = venue.name
+    }
+
+    override init() {
+        venueId = .init()
+        super.init()
     }
 }
 
