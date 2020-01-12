@@ -12,6 +12,7 @@ typealias MapRegion = MKCoordinateRegion
 struct AppleMapView {
     @Binding var selection: MapAnnotation?
     @Binding var viewport: MapRegion
+    @Binding var focusOnUser: Bool
     let viewModel: AppleMapViewModel
 }
 
@@ -34,6 +35,22 @@ extension AppleMapView: UIViewRepresentable {
         assert(view.delegate != nil)
         view.showsUserLocation = viewModel.showsUserLocation
         view.update(annotations: viewModel.annotations)
+        completeUserFocus(in: view)
+    }
+
+    fileprivate func completeUserFocus(in mapView: MKMapView) {
+        guard focusOnUser, mapView.userLocation.location != nil else {
+            return
+        }
+        focusOnUser.toggle()
+
+        let camera = MKMapCamera(lookingAtCenter: mapView.userLocation.coordinate,
+                                 fromDistance: 1000,
+                                 pitch: 0,
+                                 heading: 0)
+        MKMapView.animate(withDuration: 1,
+                          animations: { mapView.setCamera(camera, animated: false) },
+                          completion: { _ in self.viewport = mapView.region })
     }
 }
 
@@ -64,26 +81,15 @@ extension AppleMapCoordinator: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         if let model = view.annotation as? MapAnnotation {
             self.view.selection = model
+            mapView.deselectAnnotation(view.annotation, animated: true)
         }
         else if let cluster = view.annotation as? MKClusterAnnotation {
             mapView.showAnnotations(cluster.memberAnnotations, animated: true)
         }
     }
 
-    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
-        self.view.selection = nil
-    }
-
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
-        guard let update = userLocation.location else {
-            return
-        }
-
-        let delta = lastUserLocation?.distance(from: update)
-        let needsUdapte = delta.map { $0 >= threshold } ?? true
-        if needsUdapte {
-            view.viewport = mapView.region
-        }
+        view.completeUserFocus(in: mapView)
     }
 }
 

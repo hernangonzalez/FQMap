@@ -13,6 +13,7 @@ struct VenueView: View {
     @ObservedObject var viewModel: VenueViewModel
     @State private var mapSelection: MapAnnotation? = nil
     @State private var mapRegion: MapRegion = .init()
+    @State private var focusOnUser: Bool = false
 
     private var photoHeight: CGFloat {
         viewModel.photos.isEmpty ? 0 : 240
@@ -33,7 +34,10 @@ struct VenueView: View {
                         .foregroundColor(Color(.darkText))
 
                     VStack(alignment: .leading, spacing: 4) {
-                        AppleMapView(selection: $mapSelection, viewport: $mapRegion, viewModel: viewModel.map)
+                        AppleMapView(selection: $mapSelection,
+                                     viewport: $mapRegion,
+                                     focusOnUser: $focusOnUser,
+                                     viewModel: viewModel.map)
                             .frame(height: 160)
                             .cornerRadius(8)
                             .shadow(radius: 4)

@@ -25,19 +25,17 @@ class ContentViewModel: ObservableObject {
     }
 
     // MARK: Data
-    private var error: Error?
+    private var error: Error? {
+        willSet { needsUpdate.send() }
+    }
     private var venues: [Venue] = .init() {
         willSet { needsUpdate.send() }
     }
 
     // MARK: Presentation
-    var presentDetail: Bool = false {
-        willSet { needsUpdate.send() }
-    }
-    
-    var presentError: Bool = false {
-        willSet { needsUpdate.send() }
-    }
+    var presentDetail: Bool = false
+    var presentError: Bool = false
+    var focusOnUser: Bool = false
 
     var errorMessage: String {
         error?.localizedDescription ?? .init()
@@ -59,14 +57,17 @@ class ContentViewModel: ObservableObject {
     }
 
     var selection: MapAnnotation? = nil {
-        didSet {
+        willSet {
+            needsUpdate.send()
             cancellables.cancel()
-            presentDetail = selection != nil
+            presentDetail = newValue != nil
         }
     }
 
     func viewDidAppear() {
+        needsUpdate.send()
         permission.enableIfNeeded()
+        focusOnUser = true
     }
 }
 

@@ -15,6 +15,7 @@ struct ContentView: View {
         ZStack {
             AppleMapView(selection: $viewModel.selection,
                          viewport: $viewModel.searchRegion,
+                         focusOnUser: $viewModel.focusOnUser,
                          viewModel: viewModel.map)
                 .edgesIgnoringSafeArea(.all)
         }

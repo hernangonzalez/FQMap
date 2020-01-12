@@ -12,7 +12,7 @@ import FQKit
 
 struct AppleMapViewModel {
     let annotations: [MapAnnotation]
-    let showsUserLocation = true
+    let showsUserLocation: Bool = true
 }
 
 extension AppleMapViewModel {
