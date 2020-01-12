@@ -17,6 +17,7 @@ class VenueViewModel: ObservableObject {
     private var cancellables: CancellableSet = .init()
     private let venueId: String
 
+    // MARK: Presentation
     @Published var title: String = .init()
     @Published var map: AppleMapViewModel = .init()
     @Published var address: String = .init()

@@ -22,6 +22,11 @@ struct ContentView: View {
         .sheet(isPresented: $viewModel.presentDetail) {
             VenueView(viewModel: self.viewModel.venueDetail)
         }
+        .alert(isPresented: $viewModel.presentError) {
+            Alert(title: Text("Oh no!"),
+                  message: Text(viewModel.errorMessage),
+                  dismissButton: .default(Text("OK")))
+        }
     }
 }
 

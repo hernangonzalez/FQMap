@@ -25,6 +25,7 @@ class ContentViewModel: ObservableObject {
     }
 
     // MARK: Data
+    private var error: Error?
     private var venues: [Venue] = .init() {
         willSet { needsUpdate.send() }
     }
@@ -32,6 +33,14 @@ class ContentViewModel: ObservableObject {
     // MARK: Presentation
     var presentDetail: Bool = false {
         willSet { needsUpdate.send() }
+    }
+    
+    var presentError: Bool = false {
+        willSet { needsUpdate.send() }
+    }
+
+    var errorMessage: String {
+        error?.localizedDescription ?? .init()
     }
 
     var map: AppleMapViewModel {
@@ -70,8 +79,22 @@ private extension ContentViewModel {
         let places = provider.searchVenues(at: center, radius: radius)
 
         cancellables += places
-            .catchError(with: .empty)
             .receive(on: DispatchQueue.main)
-            .assign(to: \.venues, on: self)
+            .sink(receiveCompletion: update(complete:),
+                  receiveValue: update(value:))
+    }
+
+    func update(complete: Subscribers.Completion<Error>) {
+        switch complete {
+        case let .failure(value):
+            error = value
+            presentError = true
+        case .finished:
+            break
+        }
+    }
+
+    func update(value: [Venue]) {
+        venues = value
     }
 }
