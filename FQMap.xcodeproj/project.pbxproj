@@ -50,6 +50,9 @@
 		5FCB324323CB230600C05A33 /* VenueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCB324223CB230600C05A33 /* VenueViewModel.swift */; };
 		5FCB324A23CB406400C05A33 /* Permission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCB324923CB406400C05A33 /* Permission.swift */; };
 		5FCB324E23CB41BC00C05A33 /* VenueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCB324D23CB41BC00C05A33 /* VenueProvider.swift */; };
+		5FE2005023CC969600785A69 /* SFSymbol in Frameworks */ = {isa = PBXBuildFile; productRef = 5FE2004F23CC969600785A69 /* SFSymbol */; };
+		5FE2005323CC979E00785A69 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE2005223CC979E00785A69 /* CircleButton.swift */; };
+		5FE2005523CC97C400785A69 /* ActionStyleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE2005423CC97C400785A69 /* ActionStyleModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +134,8 @@
 		5FCB324223CB230600C05A33 /* VenueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueViewModel.swift; sourceTree = "<group>"; };
 		5FCB324923CB406400C05A33 /* Permission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Permission.swift; sourceTree = "<group>"; };
 		5FCB324D23CB41BC00C05A33 /* VenueProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueProvider.swift; sourceTree = "<group>"; };
+		5FE2005223CC979E00785A69 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
+		5FE2005423CC97C400785A69 /* ActionStyleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionStyleModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F74D34123CB8D1300D53EBD /* KingfisherSwiftUI in Frameworks */,
+				5FE2005023CC969600785A69 /* SFSymbol in Frameworks */,
 				5F17E2AC23C9009600603B5D /* Alamofire in Frameworks */,
 				5F17E2A923C9005E00603B5D /* DifferenceKit in Frameworks */,
 				5F17E2A623C8FFC600603B5D /* libFQKit.a in Frameworks */,
@@ -226,6 +232,7 @@
 		5F17E2A223C8FF9800603B5D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5FE2005123CC979300785A69 /* Components */,
 				5FCB323F23CB22CC00C05A33 /* Detail */,
 				5F93569023CA14D600BA0677 /* Map */,
 				5F17E28723C8FC8400603B5D /* ContentView.swift */,
@@ -330,6 +337,15 @@
 			path = Annotations;
 			sourceTree = "<group>";
 		};
+		5FE2005123CC979300785A69 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				5FE2005423CC97C400785A69 /* ActionStyleModifier.swift */,
+				5FE2005223CC979E00785A69 /* CircleButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -352,6 +368,7 @@
 				5F17E2AB23C9009600603B5D /* Alamofire */,
 				5F74D33E23CB8D1300D53EBD /* Kingfisher */,
 				5F74D34023CB8D1300D53EBD /* KingfisherSwiftUI */,
+				5FE2004F23CC969600785A69 /* SFSymbol */,
 			);
 			productName = FQMap;
 			productReference = 5F17E28023C8FC8400603B5D /* FQMap.app */;
@@ -440,6 +457,7 @@
 				5F4C7BA423CC66FC00F1D813 /* XCRemoteSwiftPackageReference "Nimble" */,
 				5F4C7BA723CC67B900F1D813 /* XCRemoteSwiftPackageReference "CwlPreconditionTesting" */,
 				5F4C7BAC23CC684800F1D813 /* XCRemoteSwiftPackageReference "CwlCatchException" */,
+				5FE2004E23CC969600785A69 /* XCRemoteSwiftPackageReference "SFSymbol" */,
 			);
 			productRefGroup = 5F17E28123C8FC8400603B5D /* Products */;
 			projectDirPath = "";
@@ -488,6 +506,8 @@
 				5FCB324123CB22ED00C05A33 /* VenueView.swift in Sources */,
 				5F74D34723CBDA6700D53EBD /* VenueAnnotationView.swift in Sources */,
 				5F17E28623C8FC8400603B5D /* SceneDelegate.swift in Sources */,
+				5FE2005323CC979E00785A69 /* CircleButton.swift in Sources */,
+				5FE2005523CC97C400785A69 /* ActionStyleModifier.swift in Sources */,
 				5F17E28823C8FC8400603B5D /* ContentView.swift in Sources */,
 				5FB98A0A23CA32F900C833A0 /* MapAnnotation.swift in Sources */,
 				5FCB324A23CB406400C05A33 /* Permission.swift in Sources */,
@@ -876,6 +896,14 @@
 				minimumVersion = 5.12.0;
 			};
 		};
+		5FE2004E23CC969600785A69 /* XCRemoteSwiftPackageReference "SFSymbol" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:Nirma/SFSymbol.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -928,6 +956,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5F17E2AA23C9009600603B5D /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		5FE2004F23CC969600785A69 /* SFSymbol */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5FE2004E23CC969600785A69 /* XCRemoteSwiftPackageReference "SFSymbol" */;
+			productName = SFSymbol;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -63,6 +63,15 @@
           "revision": "33682c2f6230c60614861dfc61df267e11a1602f",
           "version": "2.2.0"
         }
+      },
+      {
+        "package": "SFSymbol",
+        "repositoryURL": "git@github.com:Nirma/SFSymbol.git",
+        "state": {
+          "branch": null,
+          "revision": "5eba1ce4fc19b2f5aca2208b5927c544e0e89963",
+          "version": "0.2.0"
+        }
       }
     ]
   },

@@ -64,7 +64,7 @@ class ContentViewModel: ObservableObject {
         }
     }
 
-    func viewDidAppear() {
+    func findUser() {
         needsUpdate.send()
         permission.enableIfNeeded()
         focusOnUser = true
