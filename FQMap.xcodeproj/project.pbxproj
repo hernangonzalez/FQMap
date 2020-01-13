@@ -43,6 +43,8 @@
 		5F93568F23CA14CF00BA0677 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F93568E23CA14CF00BA0677 /* ContentViewModel.swift */; };
 		5F93569323CA169F00BA0677 /* AppleMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F93569223CA169F00BA0677 /* AppleMapViewModel.swift */; };
 		5F93569623CA19E800BA0677 /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F93569523CA19E800BA0677 /* Publisher+Extensions.swift */; };
+		5FB4560E23CC86AC007AF20D /* PhotoCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB4560D23CC86AC007AF20D /* PhotoCollectionView.swift */; };
+		5FB4561023CC8EB5007AF20D /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB4560F23CC8EB5007AF20D /* RemoteImage.swift */; };
 		5FB98A0A23CA32F900C833A0 /* MapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB98A0923CA32F900C833A0 /* MapAnnotation.swift */; };
 		5FCB324123CB22ED00C05A33 /* VenueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCB324023CB22ED00C05A33 /* VenueView.swift */; };
 		5FCB324323CB230600C05A33 /* VenueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCB324223CB230600C05A33 /* VenueViewModel.swift */; };
@@ -122,6 +124,8 @@
 		5F93568E23CA14CF00BA0677 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		5F93569223CA169F00BA0677 /* AppleMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMapViewModel.swift; sourceTree = "<group>"; };
 		5F93569523CA19E800BA0677 /* Publisher+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Publisher+Extensions.swift"; sourceTree = "<group>"; };
+		5FB4560D23CC86AC007AF20D /* PhotoCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionView.swift; sourceTree = "<group>"; };
+		5FB4560F23CC8EB5007AF20D /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		5FB98A0923CA32F900C833A0 /* MapAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotation.swift; sourceTree = "<group>"; };
 		5FCB324023CB22ED00C05A33 /* VenueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueView.swift; sourceTree = "<group>"; };
 		5FCB324223CB230600C05A33 /* VenueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueViewModel.swift; sourceTree = "<group>"; };
@@ -300,6 +304,8 @@
 		5FCB323F23CB22CC00C05A33 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				5FB4560D23CC86AC007AF20D /* PhotoCollectionView.swift */,
+				5FB4560F23CC8EB5007AF20D /* RemoteImage.swift */,
 				5FCB324023CB22ED00C05A33 /* VenueView.swift */,
 				5FCB324223CB230600C05A33 /* VenueViewModel.swift */,
 			);
@@ -474,6 +480,8 @@
 				5F93568D23C9EE9100BA0677 /* AppleMapView.swift in Sources */,
 				5F93569323CA169F00BA0677 /* AppleMapViewModel.swift in Sources */,
 				5FCB324323CB230600C05A33 /* VenueViewModel.swift in Sources */,
+				5FB4561023CC8EB5007AF20D /* RemoteImage.swift in Sources */,
+				5FB4560E23CC86AC007AF20D /* PhotoCollectionView.swift in Sources */,
 				5F17E28423C8FC8400603B5D /* AppDelegate.swift in Sources */,
 				5F93568F23CA14CF00BA0677 /* ContentViewModel.swift in Sources */,
 				5F93568C23C9EE9100BA0677 /* MKMapView+Extension.swift in Sources */,

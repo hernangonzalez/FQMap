@@ -7,7 +7,6 @@
 //
 
 import SwiftUI
-import KingfisherSwiftUI
 
 struct VenueView: View {
     @ObservedObject var viewModel: VenueViewModel
@@ -26,8 +25,10 @@ struct VenueView: View {
                     .edgesIgnoringSafeArea(.all)
 
                 VStack(alignment: .leading, spacing: 20) {
-                    PhotoCollection(photos: viewModel.photos)
+                    PhotoCollectionView(photos: viewModel.photos)
                         .frame(height: photoHeight)
+                        .cornerRadius(8)
+                        .shadow(radius: 4)
 
                     Text(viewModel.description)
                         .font(.body)
@@ -54,37 +55,6 @@ struct VenueView: View {
             }
             .navigationBarTitle(viewModel.title)
             .onAppear(perform: viewModel.updateIfNeeded)
-        }
-    }
-}
-
-private struct PhotoView: View {
-    let url: URL
-
-    var body: some View {
-        KFImage(url)
-            .cancelOnDisappear(true)
-            .background(Color.gray)
-            .frame(width: 200)
-            .cornerRadius(8)
-            .shadow(radius: 4)
-    }
-}
-
-private struct PhotoCollection: View {
-    let photos: [VenuePhotoViewModel]
-
-    var body: some View {
-        ZStack {
-            Color.white
-            ScrollView {
-                HStack(spacing: 1) {
-                    ForEach(photos) {
-                        PhotoView(url: $0.url)
-                            .padding(4)
-                    }
-                }
-            }
         }
     }
 }
