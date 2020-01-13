@@ -30,8 +30,8 @@ class VenueViewModel: ObservableObject {
     
     init(from model: MapAnnotation) {
         venueId = model.venueId
-        title = model.title ?? .init()
-        map = AppleMapViewModel(annotations: [model])
+        title = model.name
+        map = AppleMapViewModel(annotations: [model], zoomOnAnnotations: true)
     }
 
     func updateIfNeeded() {
@@ -46,7 +46,7 @@ class VenueViewModel: ObservableObject {
 private extension VenueViewModel {
     func updateVenue(_ venue: Venue) {
         title = venue.name
-        map = .init(from: [venue])
+        map = .init(from: [venue], zoom: true)
         photos = venue.photos.compactMap {
             VenuePhotoViewModel(from: $0)
         }

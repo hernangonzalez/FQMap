@@ -42,7 +42,7 @@ class ContentViewModel: ObservableObject {
     }
 
     var map: AppleMapViewModel {
-        .init(from: venues)
+        .init(from: venues, zoom: false)
     }
 
     var venueDetail: VenueViewModel {

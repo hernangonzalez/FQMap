@@ -36,6 +36,9 @@ extension AppleMapView: UIViewRepresentable {
         view.showsUserLocation = viewModel.showsUserLocation
         view.update(annotations: viewModel.annotations)
         completeUserFocus(in: view)
+        if viewModel.zoomOnAnnotations {
+            view.showAnnotations(viewModel.annotations, animated: true)
+        }
     }
 
     fileprivate func completeUserFocus(in mapView: MKMapView) {
@@ -122,5 +125,4 @@ extension AppleMapCoordinator: UIGestureRecognizerDelegate {
         return true
     }
 }
-
 

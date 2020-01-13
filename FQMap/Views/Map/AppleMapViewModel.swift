@@ -13,14 +13,17 @@ import FQKit
 struct AppleMapViewModel {
     let annotations: [MapAnnotation]
     let showsUserLocation: Bool = true
+    let zoomOnAnnotations: Bool
 }
 
 extension AppleMapViewModel {
     init() {
-         annotations = .init()
+        annotations = .init()
+        zoomOnAnnotations = false
      }
 
-    init(from venues: [Venue]) {
+    init(from venues: [Venue], zoom: Bool) {
+        zoomOnAnnotations = zoom
         annotations = venues.map {
             MapAnnotation(from: $0)
         }

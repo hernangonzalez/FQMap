@@ -12,15 +12,18 @@ import DifferenceKit
 
 class MapAnnotation: MKPointAnnotation {
     let venueId: String
+    let name: String
 
     init(from venue: Venue) {
         venueId = venue.id
+        name = venue.name
         super.init()
         coordinate = venue.coordinate
     }
 
     override init() {
         venueId = .init()
+        name = .init()
         super.init()
     }
 }
