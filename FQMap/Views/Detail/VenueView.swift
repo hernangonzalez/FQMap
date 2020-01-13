@@ -32,7 +32,7 @@ struct VenueView: View {
 
                     Text(viewModel.description)
                         .font(.body)
-                        .foregroundColor(Color(.darkText))
+                        .foregroundColor(Color(.label))
 
                     VStack(alignment: .leading, spacing: 4) {
                         AppleMapView(selection: $mapSelection,
@@ -46,7 +46,7 @@ struct VenueView: View {
 
                         Text(viewModel.address)
                             .font(.subheadline)
-                            .foregroundColor(Color(.darkText))
+                            .foregroundColor(Color(.secondaryLabel))
                     }
 
                     Spacer()
