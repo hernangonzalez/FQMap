@@ -8,6 +8,7 @@
 
 import Foundation
 import FQKit
+import Combine
 
 class VenueViewModel: ObservableObject {
     // MARKL Dependencies
@@ -35,24 +36,34 @@ class VenueViewModel: ObservableObject {
         self.map = AppleMapViewModel(annotations: [model], zoomOnAnnotations: true)
         self.provider = provider
     }
+}
 
+// MARK: - Update
+extension VenueViewModel {
     func updateIfNeeded() {
         let photos = provider.venueDetails(venueId: venueId)
         cancellables += photos
-            .catchError(with: .empty)
             .receive(on: DispatchQueue.main)
-            .sink(receiveValue: updateVenue(_:))
+            .sink(receiveCompletion: update(complete:),
+                  receiveValue: updateVenue(_:))
     }
-}
 
-private extension VenueViewModel {
-    func updateVenue(_ venue: Venue) {
+    private func updateVenue(_ venue: Venue) {
         title = venue.name
         description = venue.description
         address = venue.address
         map = .init(from: [venue], zoom: true)
         photos = venue.photos.compactMap {
             VenuePhotoViewModel(from: $0)
+        }
+    }
+
+    func update(complete: Subscribers.Completion<Error>) {
+        switch complete {
+        case let .failure(error):
+            debugPrint(error)
+        case .finished:
+            break
         }
     }
 }

@@ -8,16 +8,19 @@
 
 import Foundation
 
-struct VenueDetailsResponse {
-    let id: String
-    let name: String
-    let description: String
-    let location: Location
-    let photos: [Photo]
+struct VenueDetailsResponse: Decodable {
+    struct Venue {
+        let id: String
+        let name: String
+        let description: String
+        let location: Location
+        let photos: [Photo]
+    }
+    let venue: Venue
 }
 
 // MARK: - Decodable
-extension VenueDetailsResponse: Decodable {
+extension VenueDetailsResponse.Venue: Decodable {
     struct Photos: Decodable {
         let items: [Photo]
     }
@@ -43,7 +46,8 @@ extension VenueDetailsResponse: Decodable {
 
 // MARK: - Venue
 extension Venue {
-    init(from other: VenueDetailsResponse) {
+    init(from response: VenueDetailsResponse) {
+        let other = response.venue
         id = other.id
         name = other.name
         coordinate = other.location.coordinate

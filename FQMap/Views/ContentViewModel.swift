@@ -76,6 +76,7 @@ class ContentViewModel: ObservableObject {
     }
 }
 
+// MARK: - Update
 private extension ContentViewModel {
     func updateResults() {
         cancellables.cancel()
