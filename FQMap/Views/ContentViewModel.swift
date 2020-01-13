@@ -14,8 +14,8 @@ import CoreLocation
 
 class ContentViewModel: ObservableObject {
     // MARK: Dependencies
-    private let permission: Permission = CLLocationManager()
-    private let provider: VenueProvider = FQKit()
+    private let permission: Permission
+    private let provider: VenueProvider
 
     // MARK: Combine
     private var cancellables: CancellableSet = .init()
@@ -68,6 +68,11 @@ class ContentViewModel: ObservableObject {
         needsUpdate.send()
         permission.enableIfNeeded()
         focusOnUser = true
+    }
+
+    init(permission: Permission = CLLocationManager(), provider: VenueProvider = FQKit()) {
+        self.permission = permission
+        self.provider = provider
     }
 }
 

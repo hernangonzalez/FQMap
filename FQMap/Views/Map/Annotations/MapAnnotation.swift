@@ -28,9 +28,17 @@ class MapAnnotation: MKPointAnnotation {
     }
 }
 
+// MARK: - Differentiable
 extension MapAnnotation: Differentiable {
     var differenceIdentifier: String {
         venueId
     }
 }
 
+// MARK: - Equatable
+extension MapAnnotation  {
+    static func == (lhs: MapAnnotation, rhs: MapAnnotation) -> Bool {
+        return lhs.name == rhs.name
+            && lhs.venueId == rhs.venueId
+    }
+}

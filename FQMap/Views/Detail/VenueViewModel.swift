@@ -11,7 +11,7 @@ import FQKit
 
 class VenueViewModel: ObservableObject {
     // MARKL Dependencies
-    private let provider: VenueProvider = FQKit()
+    private let provider: VenueProvider
 
     // MARK: Data
     private var cancellables: CancellableSet = .init()
@@ -24,14 +24,16 @@ class VenueViewModel: ObservableObject {
     @Published var description: String = .init()
     @Published var photos: [VenuePhotoViewModel] = .init()
 
-    init() {
-        venueId = .init()
+    init(provider: VenueProvider = FQKit()) {
+        self.venueId = .init()
+        self.provider = provider
     }
     
-    init(from model: MapAnnotation) {
-        venueId = model.venueId
-        title = model.name
-        map = AppleMapViewModel(annotations: [model], zoomOnAnnotations: true)
+    init(from model: MapAnnotation, provider: VenueProvider = FQKit()) {
+        self.venueId = model.venueId
+        self.title = model.name
+        self.map = AppleMapViewModel(annotations: [model], zoomOnAnnotations: true)
+        self.provider = provider
     }
 
     func updateIfNeeded() {
@@ -46,6 +48,8 @@ class VenueViewModel: ObservableObject {
 private extension VenueViewModel {
     func updateVenue(_ venue: Venue) {
         title = venue.name
+        description = venue.description
+        address = venue.address
         map = .init(from: [venue], zoom: true)
         photos = venue.photos.compactMap {
             VenuePhotoViewModel(from: $0)
@@ -54,7 +58,7 @@ private extension VenueViewModel {
 }
 
 // MARK: - Photo
-struct VenuePhotoViewModel: Identifiable {
+struct VenuePhotoViewModel: Identifiable, Equatable {
     let id: String
     let url: URL
 }

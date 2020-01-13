@@ -23,6 +23,14 @@
 		5F17E2BC23C9D53200603B5D /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F17E2BB23C9D53200603B5D /* Network.swift */; };
 		5F17E2BF23C9D66100603B5D /* ExploreResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F17E2BE23C9D66100603B5D /* ExploreResponse.swift */; };
 		5F17E2C223C9D87B00603B5D /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F17E2C123C9D87B00603B5D /* Venue.swift */; };
+		5F4C7B8E23CC60BF00F1D813 /* FQMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4C7B8D23CC60BF00F1D813 /* FQMapTests.swift */; };
+		5F4C7B9723CC60F600F1D813 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 5F4C7B9623CC60F600F1D813 /* Quick */; };
+		5F4C7BA623CC66FC00F1D813 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 5F4C7BA523CC66FC00F1D813 /* Nimble */; };
+		5F4C7BA923CC67B900F1D813 /* CwlPreconditionTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 5F4C7BA823CC67B900F1D813 /* CwlPreconditionTesting */; };
+		5F4C7BAA23CC67B900F1D813 /* CwlPreconditionTesting in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 5F4C7BA823CC67B900F1D813 /* CwlPreconditionTesting */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		5F4C7BAE23CC684800F1D813 /* CwlCatchException in Frameworks */ = {isa = PBXBuildFile; productRef = 5F4C7BAD23CC684800F1D813 /* CwlCatchException */; };
+		5F4C7BAF23CC684800F1D813 /* CwlCatchException in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 5F4C7BAD23CC684800F1D813 /* CwlCatchException */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		5F4C7BB123CC6A0300F1D813 /* Seeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4C7BB023CC6A0300F1D813 /* Seeds.swift */; };
 		5F74D33823CB88DB00D53EBD /* VenueDetailsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F74D33723CB88DB00D53EBD /* VenueDetailsRequest.swift */; };
 		5F74D33A23CB8A6300D53EBD /* FoursquareResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F74D33923CB8A6300D53EBD /* FoursquareResponse.swift */; };
 		5F74D33C23CB8A8700D53EBD /* VenueDetailsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F74D33B23CB8A8700D53EBD /* VenueDetailsResponse.swift */; };
@@ -50,6 +58,13 @@
 			remoteGlobalIDString = 5F17E29A23C8FF4800603B5D;
 			remoteInfo = FQKit;
 		};
+		5F4C7B9023CC60BF00F1D813 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F17E27823C8FC8400603B5D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F17E27F23C8FC8400603B5D;
+			remoteInfo = FQMap;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -60,6 +75,18 @@
 			dstSubfolderSpec = 16;
 			files = (
 			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F4C7BAB23CC67B900F1D813 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5F4C7BAA23CC67B900F1D813 /* CwlPreconditionTesting in Embed Frameworks */,
+				5F4C7BAF23CC684800F1D813 /* CwlCatchException in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -81,6 +108,10 @@
 		5F17E2BB23C9D53200603B5D /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		5F17E2BE23C9D66100603B5D /* ExploreResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreResponse.swift; sourceTree = "<group>"; };
 		5F17E2C123C9D87B00603B5D /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
+		5F4C7B8B23CC60BF00F1D813 /* FQMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FQMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F4C7B8D23CC60BF00F1D813 /* FQMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FQMapTests.swift; sourceTree = "<group>"; };
+		5F4C7B8F23CC60BF00F1D813 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F4C7BB023CC6A0300F1D813 /* Seeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seeds.swift; sourceTree = "<group>"; };
 		5F74D33723CB88DB00D53EBD /* VenueDetailsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDetailsRequest.swift; sourceTree = "<group>"; };
 		5F74D33923CB8A6300D53EBD /* FoursquareResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareResponse.swift; sourceTree = "<group>"; };
 		5F74D33B23CB8A8700D53EBD /* VenueDetailsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDetailsResponse.swift; sourceTree = "<group>"; };
@@ -118,6 +149,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5F4C7B8823CC60BF00F1D813 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F4C7B9723CC60F600F1D813 /* Quick in Frameworks */,
+				5F4C7BAE23CC684800F1D813 /* CwlCatchException in Frameworks */,
+				5F4C7BA623CC66FC00F1D813 /* Nimble in Frameworks */,
+				5F4C7BA923CC67B900F1D813 /* CwlPreconditionTesting in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -126,6 +168,7 @@
 			children = (
 				5F17E28223C8FC8400603B5D /* FQMap */,
 				5F17E29C23C8FF4800603B5D /* FQKit */,
+				5F4C7B8C23CC60BF00F1D813 /* FQMapTests */,
 				5F17E28123C8FC8400603B5D /* Products */,
 				5F17E2A523C8FFC600603B5D /* Frameworks */,
 			);
@@ -136,6 +179,7 @@
 			children = (
 				5F17E28023C8FC8400603B5D /* FQMap.app */,
 				5F17E29B23C8FF4800603B5D /* libFQKit.a */,
+				5F4C7B8B23CC60BF00F1D813 /* FQMapTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -223,6 +267,16 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		5F4C7B8C23CC60BF00F1D813 /* FQMapTests */ = {
+			isa = PBXGroup;
+			children = (
+				5F4C7B8D23CC60BF00F1D813 /* FQMapTests.swift */,
+				5F4C7BB023CC6A0300F1D813 /* Seeds.swift */,
+				5F4C7B8F23CC60BF00F1D813 /* Info.plist */,
+			);
+			path = FQMapTests;
+			sourceTree = "<group>";
+		};
 		5F93569023CA14D600BA0677 /* Map */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,7 +338,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				5FCB324723CB3D4200C05A33 /* PBXTargetDependency */,
 				5F17E2A423C8FFC100603B5D /* PBXTargetDependency */,
 			);
 			name = FQMap;
@@ -316,6 +369,32 @@
 			productReference = 5F17E29B23C8FF4800603B5D /* libFQKit.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		5F4C7B8A23CC60BF00F1D813 /* FQMapTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F4C7B9423CC60BF00F1D813 /* Build configuration list for PBXNativeTarget "FQMapTests" */;
+			buildPhases = (
+				5F4C7B8723CC60BF00F1D813 /* Sources */,
+				5F4C7B8823CC60BF00F1D813 /* Frameworks */,
+				5F4C7B8923CC60BF00F1D813 /* Resources */,
+				5F4C7BAB23CC67B900F1D813 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5F4C7B9923CC612200F1D813 /* PBXTargetDependency */,
+				5F4C7B9123CC60BF00F1D813 /* PBXTargetDependency */,
+			);
+			name = FQMapTests;
+			packageProductDependencies = (
+				5F4C7B9623CC60F600F1D813 /* Quick */,
+				5F4C7BA523CC66FC00F1D813 /* Nimble */,
+				5F4C7BA823CC67B900F1D813 /* CwlPreconditionTesting */,
+				5F4C7BAD23CC684800F1D813 /* CwlCatchException */,
+			);
+			productName = FQMapTests;
+			productReference = 5F4C7B8B23CC60BF00F1D813 /* FQMapTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -332,6 +411,10 @@
 					5F17E29A23C8FF4800603B5D = {
 						CreatedOnToolsVersion = 11.3;
 					};
+					5F4C7B8A23CC60BF00F1D813 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 5F17E27F23C8FC8400603B5D;
+					};
 				};
 			};
 			buildConfigurationList = 5F17E27B23C8FC8400603B5D /* Build configuration list for PBXProject "FQMap" */;
@@ -347,6 +430,10 @@
 				5F17E2A723C9005E00603B5D /* XCRemoteSwiftPackageReference "DifferenceKit" */,
 				5F17E2AA23C9009600603B5D /* XCRemoteSwiftPackageReference "Alamofire" */,
 				5F74D33D23CB8D1300D53EBD /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				5F4C7B9523CC60F600F1D813 /* XCRemoteSwiftPackageReference "Quick" */,
+				5F4C7BA423CC66FC00F1D813 /* XCRemoteSwiftPackageReference "Nimble" */,
+				5F4C7BA723CC67B900F1D813 /* XCRemoteSwiftPackageReference "CwlPreconditionTesting" */,
+				5F4C7BAC23CC684800F1D813 /* XCRemoteSwiftPackageReference "CwlCatchException" */,
 			);
 			productRefGroup = 5F17E28123C8FC8400603B5D /* Products */;
 			projectDirPath = "";
@@ -354,6 +441,7 @@
 			targets = (
 				5F17E27F23C8FC8400603B5D /* FQMap */,
 				5F17E29A23C8FF4800603B5D /* FQKit */,
+				5F4C7B8A23CC60BF00F1D813 /* FQMapTests */,
 			);
 		};
 /* End PBXProject section */
@@ -366,6 +454,13 @@
 				5F17E29023C8FC8600603B5D /* LaunchScreen.storyboard in Resources */,
 				5F17E28D23C8FC8600603B5D /* Preview Assets.xcassets in Resources */,
 				5F17E28A23C8FC8600603B5D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F4C7B8923CC60BF00F1D813 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +506,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5F4C7B8723CC60BF00F1D813 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F4C7BB123CC6A0300F1D813 /* Seeds.swift in Sources */,
+				5F4C7B8E23CC60BF00F1D813 /* FQMapTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -419,13 +523,18 @@
 			target = 5F17E29A23C8FF4800603B5D /* FQKit */;
 			targetProxy = 5F17E2A323C8FFC100603B5D /* PBXContainerItemProxy */;
 		};
+		5F4C7B9123CC60BF00F1D813 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5F17E27F23C8FC8400603B5D /* FQMap */;
+			targetProxy = 5F4C7B9023CC60BF00F1D813 /* PBXContainerItemProxy */;
+		};
+		5F4C7B9923CC612200F1D813 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 5F4C7B9823CC612200F1D813 /* Quick */;
+		};
 		5FCB324523CB3D2700C05A33 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			productRef = 5FCB324423CB3D2700C05A33 /* Alamofire */;
-		};
-		5FCB324723CB3D4200C05A33 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = 5FCB324623CB3D4200C05A33 /* DifferenceKit */;
 		};
 /* End PBXTargetDependency section */
 
@@ -623,6 +732,44 @@
 			};
 			name = Release;
 		};
+		5F4C7B9223CC60BF00F1D813 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FQMapTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hernan.dott.FQMapTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FQMap.app/FQMap";
+			};
+			name = Debug;
+		};
+		5F4C7B9323CC60BF00F1D813 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FQMapTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hernan.dott.FQMapTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FQMap.app/FQMap";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -653,6 +800,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		5F4C7B9423CC60BF00F1D813 /* Build configuration list for PBXNativeTarget "FQMapTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F4C7B9223CC60BF00F1D813 /* Debug */,
+				5F4C7B9323CC60BF00F1D813 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -670,6 +826,38 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 4.9.1;
+			};
+		};
+		5F4C7B9523CC60F600F1D813 /* XCRemoteSwiftPackageReference "Quick" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:Quick/Quick.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.0;
+			};
+		};
+		5F4C7BA423CC66FC00F1D813 /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:Quick/Nimble.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.5;
+			};
+		};
+		5F4C7BA723CC67B900F1D813 /* XCRemoteSwiftPackageReference "CwlPreconditionTesting" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:mattgallagher/CwlPreconditionTesting.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+		5F4C7BAC23CC684800F1D813 /* XCRemoteSwiftPackageReference "CwlCatchException" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:mattgallagher/CwlCatchException.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
 			};
 		};
 		5F74D33D23CB8D1300D53EBD /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
@@ -693,6 +881,31 @@
 			package = 5F17E2AA23C9009600603B5D /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
+		5F4C7B9623CC60F600F1D813 /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5F4C7B9523CC60F600F1D813 /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+		5F4C7B9823CC612200F1D813 /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5F4C7B9523CC60F600F1D813 /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+		5F4C7BA523CC66FC00F1D813 /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5F4C7BA423CC66FC00F1D813 /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+		5F4C7BA823CC67B900F1D813 /* CwlPreconditionTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5F4C7BA723CC67B900F1D813 /* XCRemoteSwiftPackageReference "CwlPreconditionTesting" */;
+			productName = CwlPreconditionTesting;
+		};
+		5F4C7BAD23CC684800F1D813 /* CwlCatchException */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5F4C7BAC23CC684800F1D813 /* XCRemoteSwiftPackageReference "CwlCatchException" */;
+			productName = CwlCatchException;
+		};
 		5F74D33E23CB8D1300D53EBD /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 5F74D33D23CB8D1300D53EBD /* XCRemoteSwiftPackageReference "Kingfisher" */;
@@ -707,11 +920,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5F17E2AA23C9009600603B5D /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
-		};
-		5FCB324623CB3D4200C05A33 /* DifferenceKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5F17E2A723C9005E00603B5D /* XCRemoteSwiftPackageReference "DifferenceKit" */;
-			productName = DifferenceKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
